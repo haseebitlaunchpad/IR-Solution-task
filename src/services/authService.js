@@ -4,6 +4,11 @@ import axios from "axios";
 
 export const logInUser = async (payload) => {
 
-    await axios.post("https://dummyjson.com/auth/login", payload).then((res) => (res)).catch((error) => (console.log(error)))
+    try {
+        const response = await axios.post("https://dummyjson.com/auth/login", payload);
+        return response.data;
+    } catch (error) {
 
+        throw error;
+    }
 }

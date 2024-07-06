@@ -5,7 +5,7 @@ const CheckBox = ({ className, checked, onChange, label, ...props }) => {
     <div>
       <label className="flex items-center">
         <input
-          className="h-6 w-6 border-0 rounded-none focus:ring-2 focus:ring-blue-500"
+          className={`h-6 w-6 border-0 rounded-none ${className} `}
           type="checkbox"
           checked={checked}
           onChange={onChange}
